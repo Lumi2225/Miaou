@@ -1,7 +1,7 @@
-const { MessageFlags } = require("discord.js");
+const { MessageFlags, Events } = require("discord.js");
 
 module.exports = {
-    name: "interactionCreate",
+    name: Events.InteractionCreate,
     async execute(client, interaction) {
         if (interaction.isCommand()) {
             const command = client.commands.get(interaction.commandName);

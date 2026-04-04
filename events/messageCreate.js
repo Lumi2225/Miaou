@@ -1,5 +1,7 @@
+const { Events } = require("discord.js");
+
 module.exports = {
-    name: "messageCreate",
+    name: Events.MessageCreate,
     async execute(client, message) {
         if (!message.inGuild() || message.author.bot) return;
 
